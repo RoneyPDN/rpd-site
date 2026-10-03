@@ -1,0 +1,93 @@
+:root {
+  --paper: #f3efe6;
+  --ink: #1c1915;
+  --green: #1e3d34;
+  --copper: #8c4a2f;
+  --card: #fffcf7;
+  --border: rgba(28, 25, 21, .12);
+  --body: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --display: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 8rem; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 1rem; line-height: 1.7; }
+a { color: inherit; text-underline-offset: .25em; }
+a:focus-visible { outline: 3px solid var(--copper); outline-offset: 5px; border-radius: 2px; }
+p { margin: 0 0 1rem; max-width: 62ch; }
+h1, h2, h3 { margin: 0; font-weight: 400; line-height: 1.15; }
+h1, h2 { font-family: var(--display); }
+h2 { font-size: clamp(2rem, 3.5vw, 2.9rem); letter-spacing: -.025em; }
+h3 { font-size: 1.35rem; font-weight: 600; line-height: 1.3; }
+.container { width: min(1080px, calc(100% - 4rem)); margin-inline: auto; }
+.site-header { position: sticky; top: 0; z-index: 10; background: var(--green); color: var(--paper); border-bottom: 1px solid rgba(243, 239, 230, .18); }
+.header-inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding-block: 1.15rem; }
+.brand { text-decoration: none; font-family: var(--display); font-size: 1.65rem; line-height: 1.1; letter-spacing: .025em; }
+.brand span { display: block; margin-top: .4rem; font-family: var(--body); font-size: .7rem; letter-spacing: .025em; }
+nav { display: flex; flex-wrap: wrap; gap: .65rem 1.5rem; }
+nav a { font-size: .9rem; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color .18s ease, color .18s ease; }
+nav a:hover { border-color: currentColor; color: #eac2a8; }
+.site-header a:focus-visible, .site-footer a:focus-visible { outline-color: #eac2a8; }
+.hero { padding-top: 6rem; padding-bottom: 3rem; }
+.eyebrow { color: var(--copper); font-size: .75rem; font-weight: 600; letter-spacing: .11em; text-transform: uppercase; margin-bottom: 1.2rem; }
+h1 { max-width: 15ch; font-size: clamp(2.6rem, 6.4vw, 4.4rem); letter-spacing: -.035em; }
+.hero-description { font-size: 1.2rem; margin-top: 1.75rem; max-width: 58ch; }
+.slogan { font-size: .95rem; color: #5c554b; }
+.hero-links { display: flex; flex-wrap: wrap; gap: 1rem 2rem; margin-top: 2rem; }
+.text-link { display: inline-flex; align-items: center; gap: 1rem; width: fit-content; color: var(--green); font-weight: 600; font-size: .95rem; text-decoration: none; border-bottom: 1px solid var(--green); padding-block: .25rem; transition: color .18s ease, border-color .18s ease; }
+.text-link:hover { color: var(--copper); border-color: var(--copper); }
+.hero-note { display: flex; align-items: center; gap: 1rem; margin-top: 4rem; font-size: .8rem; color: #5c554b; }
+.rule { flex: 0 0 3rem; height: 1px; background: var(--copper); }
+.section { padding-block: 5.5rem; }
+.section-heading { margin-bottom: 2.5rem; }
+.section-heading > p:last-child:not(.eyebrow) { margin-top: 1rem; margin-bottom: 0; color: #5c554b; }
+.services { border-bottom: 1px solid var(--border); }
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; }
+.card { padding: 2rem; background: var(--card); border: 1px solid var(--border); border-radius: 3px; }
+.card h3 { margin-bottom: 1rem; }
+.card p:last-child { margin-bottom: 0; }
+.card-index { display: block; color: var(--copper); font-size: .8rem; margin-bottom: 1.6rem; font-variant-numeric: tabular-nums; }
+.project-card { display: flex; flex-direction: column; align-items: flex-start; }
+.project-label { color: var(--copper); font-size: .72rem; font-weight: 600; letter-spacing: .035em; margin-bottom: 1.1rem; }
+.project-card h3 { font-family: var(--display); font-size: 1.8rem; font-weight: 400; }
+.project-limit { color: #5c554b; font-size: .87rem; }
+.project-card .text-link { margin-top: auto; }
+.experience-content { display: flex; flex-direction: column; gap: 1.75rem; }
+.experience-entry + .experience-entry { padding-top: 1.5rem; border-top: 1px solid var(--border); }
+.placeholder-mark { margin-left: .35rem; color: var(--copper); font-size: .68rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.site-footer .placeholder-mark { color: #eac2a8; }
+.experience { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.experience-layout, .about-layout { display: grid; grid-template-columns: .9fr 1.1fr; gap: 4rem; }
+.experience-layout .section-heading { margin-bottom: 0; }
+.experience-entry h3 { font-size: 1.5rem; margin-bottom: .6rem; }
+.experience-entry .eyebrow { margin-bottom: .75rem; }
+.role { font-size: .95rem; }
+.internship { margin-top: 1.75rem; padding-top: 1.5rem; border-top: 1px solid var(--border); color: #5c554b; font-size: .9rem; margin-bottom: 0; }
+.education { font-size: .9rem; color: #5c554b; margin-bottom: 0; }
+.site-footer { background: var(--green); color: var(--paper); padding-block: 3rem; }
+.footer-inner { display: flex; align-items: flex-end; justify-content: space-between; gap: 2rem; }
+.footer-brand { font-family: var(--display); font-size: 2rem; margin-bottom: .75rem; }
+.site-footer p:not(.footer-brand) { font-size: .8rem; margin-bottom: .3rem; }
+.site-footer nav { flex-shrink: 0; }
+@media (max-width: 719px) {
+  html { scroll-padding-top: 10rem; }
+  .container { width: calc(100% - 2.5rem); }
+  .header-inner { flex-direction: column; align-items: flex-start; gap: 1rem; padding-block: 1rem; }
+  .brand { font-size: 1.4rem; }
+  .brand span { font-size: .65rem; }
+  .site-header nav { gap: .5rem 1.15rem; }
+  .site-header nav a { font-size: .82rem; }
+  .hero { padding-top: 3.25rem; padding-bottom: 1rem; }
+  .hero-description { font-size: 1.05rem; }
+  .hero-note { margin-top: 2.5rem; align-items: flex-start; }
+  .rule { margin-top: .65rem; flex-basis: 1.75rem; }
+  .section { padding-block: 3.25rem; }
+  .section-heading { margin-bottom: 1.75rem; }
+  .grid, .experience-layout, .about-layout { grid-template-columns: 1fr; }
+  .experience-layout, .about-layout { gap: 2rem; }
+  .card { padding: 1.5rem; }
+  .footer-inner { flex-direction: column; align-items: flex-start; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  a { transition: none; }
+}
